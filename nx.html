@@ -32,12 +32,12 @@
         <style type="text/css">
 
              #mynetwork {
-                 width: 100%;
-                 height: 600px;
+                 width: 1200px;
+                 height: 500px;
                  background-color: #ffffff;
-                 border: 1px solid lightgray;
+                 border: 0px solid rgb(255, 0, 0);
                  position: relative;
-                 float: left;
+                 float: none;
              }
 
              
@@ -88,8 +88,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#97c2fc", "id": "Stouts", "label": "Stouts", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Pale Lagers", "label": "Pale Lagers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Pale Ales", "label": "Pale Ales", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "India Pale Ales", "label": "India Pale Ales", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Strong Ales", "label": "Strong Ales", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Wild/Sour Beers", "label": "Wild/Sour Beers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Wheat Beers", "label": "Wheat Beers", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Specialty Beer", "label": "Specialty Beer", "shape": "dot", "size": 10}, {"color": "#97c2fc", "id": "Brown Ales", "label": "Brown Ales", "shape": "dot", "size": 10}]);
-                  edges = new vis.DataSet([{"from": "Stouts", "to": "Stouts", "width": 1}, {"from": "Stouts", "to": "Pale Lagers", "width": 1}, {"from": "Stouts", "to": "Pale Ales", "width": 1}, {"from": "Stouts", "to": "India Pale Ales", "width": 1}, {"from": "Stouts", "to": "Strong Ales", "width": 1}, {"from": "Stouts", "to": "Wild/Sour Beers", "width": 1}, {"from": "Pale Lagers", "to": "India Pale Ales", "width": 1}, {"from": "Pale Ales", "to": "Wheat Beers", "width": 1}, {"from": "Pale Ales", "to": "Pale Lagers", "width": 1}, {"from": "Pale Ales", "to": "Pale Ales", "width": 1}, {"from": "Pale Ales", "to": "India Pale Ales", "width": 1}, {"from": "Pale Ales", "to": "Strong Ales", "width": 1}, {"from": "Pale Ales", "to": "Wild/Sour Beers", "width": 1}, {"from": "India Pale Ales", "to": "Wheat Beers", "width": 1}, {"from": "India Pale Ales", "to": "India Pale Ales", "width": 1}, {"from": "India Pale Ales", "to": "Strong Ales", "width": 1}, {"from": "India Pale Ales", "to": "Specialty Beer", "width": 1}, {"from": "India Pale Ales", "to": "Wild/Sour Beers", "width": 1}, {"from": "Brown Ales", "to": "Stouts", "width": 1}, {"from": "Brown Ales", "to": "Pale Ales", "width": 1}, {"from": "Brown Ales", "to": "India Pale Ales", "width": 1}, {"from": "Brown Ales", "to": "Strong Ales", "width": 1}]);
+                  nodes = new vis.DataSet([{"color": "#e9c46a", "id": "Stouts", "label": "Stouts", "physics": false, "shape": "dot", "size": 10, "x": 229.8133318304133, "y": -192.8362773998825}, {"color": "#e9c46a", "id": "Pale Lagers", "label": "Pale Lagers", "physics": false, "shape": "dot", "size": 10, "x": 52.094468626085465, "y": -295.4423229201481}, {"color": "#e9c46a", "id": "Pale Ales", "label": "Pale Ales", "physics": false, "shape": "dot", "size": 10, "x": -150.00001490116108, "y": -259.8076207120709}, {"color": "#e9c46a", "id": "India Pale Ales", "label": "India Pale Ales", "physics": false, "shape": "dot", "size": 10, "x": -281.90778108498927, "y": -102.60606936212335}, {"color": "#e9c46a", "id": "Strong Ales", "label": "Strong Ales", "physics": false, "shape": "dot", "size": 10, "x": -149.9999701976778, "y": 259.80762667253526}, {"color": "#e9c46a", "id": "Wild/Sour Beers", "label": "Wild/Sour Beers", "physics": false, "shape": "dot", "size": 10, "x": 229.81329606762665, "y": 192.83631912313356}, {"color": "#e9c46a", "id": "Wheat Beers", "label": "Wheat Beers", "physics": false, "shape": "dot", "size": 10, "x": 300.0, "y": -5.960464438064466e-06}, {"color": "#e9c46a", "id": "Specialty Beer", "label": "Specialty Beer", "physics": false, "shape": "dot", "size": 10, "x": 52.094450744692146, "y": 295.4423109992192}, {"color": "#e9c46a", "id": "Brown Ales", "label": "Brown Ales", "physics": false, "shape": "dot", "size": 10, "x": -281.90778108498927, "y": 102.60603955980116}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "Stouts", "to": "Stouts", "width": 1}, {"arrows": "to", "from": "Stouts", "to": "Pale Lagers", "width": 1}, {"arrows": "to", "from": "Stouts", "to": "Pale Ales", "width": 1}, {"arrows": "to", "from": "Stouts", "to": "India Pale Ales", "width": 1}, {"arrows": "to", "from": "Stouts", "to": "Strong Ales", "width": 1}, {"arrows": "to", "from": "Stouts", "to": "Wild/Sour Beers", "width": 1}, {"arrows": "to", "from": "Pale Lagers", "to": "Stouts", "width": 1}, {"arrows": "to", "from": "Pale Lagers", "to": "India Pale Ales", "width": 1}, {"arrows": "to", "from": "Pale Ales", "to": "Wheat Beers", "width": 1}, {"arrows": "to", "from": "Pale Ales", "to": "Stouts", "width": 1}, {"arrows": "to", "from": "Pale Ales", "to": "Pale Lagers", "width": 1}, {"arrows": "to", "from": "Pale Ales", "to": "Pale Ales", "width": 1}, {"arrows": "to", "from": "Pale Ales", "to": "India Pale Ales", "width": 1}, {"arrows": "to", "from": "Pale Ales", "to": "Strong Ales", "width": 1}, {"arrows": "to", "from": "Pale Ales", "to": "Wild/Sour Beers", "width": 1}, {"arrows": "to", "from": "India Pale Ales", "to": "Wheat Beers", "width": 1}, {"arrows": "to", "from": "India Pale Ales", "to": "Stouts", "width": 1}, {"arrows": "to", "from": "India Pale Ales", "to": "Pale Lagers", "width": 1}, {"arrows": "to", "from": "India Pale Ales", "to": "Pale Ales", "width": 1}, {"arrows": "to", "from": "India Pale Ales", "to": "India Pale Ales", "width": 1}, {"arrows": "to", "from": "India Pale Ales", "to": "Strong Ales", "width": 1}, {"arrows": "to", "from": "India Pale Ales", "to": "Specialty Beer", "width": 1}, {"arrows": "to", "from": "India Pale Ales", "to": "Wild/Sour Beers", "width": 1}, {"arrows": "to", "from": "Brown Ales", "to": "Stouts", "width": 1}, {"arrows": "to", "from": "Brown Ales", "to": "Pale Ales", "width": 1}, {"arrows": "to", "from": "Brown Ales", "to": "India Pale Ales", "width": 1}, {"arrows": "to", "from": "Brown Ales", "to": "Strong Ales", "width": 1}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
@@ -119,7 +119,7 @@
         "hideNodesOnDrag": false
     },
     "physics": {
-        "enabled": true,
+        "enabled": false,
         "stabilization": {
             "enabled": true,
             "fit": true,
@@ -130,21 +130,8 @@
     }
 };
 
-                  
-
-
-                  
 
                   network = new vis.Network(container, data, options);
-
-                  
-
-                  
-
-                  
-
-
-                  
 
                   return network;
 
