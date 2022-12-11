@@ -497,36 +497,51 @@ section {
 /*--------------------------------------------------------------
 # graph
 --------------------------------------------------------------*/
-.graph .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #e9c46a;
+.graph .count-box {
+  padding: 30px 30px 25px 30px;
+  margin-top: 30px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #fff;
 }
 
-.graph .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.graph .content ul li {
-  margin-bottom: 20px;
+.graph .image {
   display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+  padding-bottom: 30px;
+}
+
+.graph .count-box i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  background: #e9c46a;
+  color: #fff;
+  border-radius: 50px;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
 }
 
-.graph .content ul strong {
-  margin-right: 10px;
+.graph .count-box span {
+  font-size: 36px;
+  display: block;
+  font-weight: 600;
+  color: #011426;
 }
 
-.graph .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
-  color: #e9c46a;
-  line-height: 0;
-}
-
-.graph .content p:last-child {
-  margin-bottom: 0;
+.graph .count-box p {
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica", sans-serif;
+  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
