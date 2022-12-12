@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: 'Helvetica', sans-serif;
-  color: #272829;
+  color: #000000;
 }
 
 a {
@@ -297,7 +297,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -362,6 +362,11 @@ h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+.smaller {
+  width: 70%;
+  margin: auto;
+}
+
 section {
   padding: 60px 0;
   overflow: hidden;
@@ -418,6 +423,13 @@ section {
   color: #e9c46a;
 }
 
+.about p {
+
+    width: 70%;
+    margin: auto;
+
+}
+
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -456,6 +468,11 @@ section {
   background: #fff;
 }
 
+.dataset p {
+  width: 70%;
+  margin: auto;
+}
+
 .dataset .image {
   display: flex;
   justify-content: center;
@@ -492,6 +509,7 @@ section {
   margin: 0;
   font-family: "Helvetica", sans-serif;
   font-size: 14px;
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -504,6 +522,13 @@ section {
   position: relative;
   text-align: center;
   background: #fff;
+}
+
+.graph p {
+
+  width: 70%;
+  margin: auto;
+
 }
 
 .graph .image {
@@ -554,6 +579,13 @@ section {
   border-radius: 0;
 }
 
+.skills p {
+
+  width: 70%;
+  margin: auto;
+
+}
+
 .skills .progress .skill {
   padding: 10px 0;
   margin: 0;
@@ -589,6 +621,13 @@ section {
   margin-top: 20px;
   margin-bottom: 20px;
   color: #45505b;
+}
+
+.resume p {
+
+  width: 70%;
+  margin: auto;
+
 }
 
 .resume .resume-item {
@@ -646,6 +685,13 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+}
+
+.portfolio p {
+
+  width: 70%;
+  margin: auto;
+
 }
 
 .portfolio #portfolio-flters {
@@ -868,10 +914,17 @@ section {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  padding: 70px 20px 80px 20px;
-  transition: all ease-in-out 0.3s;
+  padding: 20px 20px 20px 20px;
+  transition: all ease-in-out 0.1s;
   background: #fff;
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+}
+
+.services p {
+
+  width: 70%;
+  margin: auto;
+
 }
 
 .services .icon-box .icon {
@@ -1019,6 +1072,13 @@ section {
   margin: 0 auto;
 }
 
+.testimonials p {
+
+  width: 70%;
+  margin: auto;
+
+}
+
 .testimonials .testimonial-item h3 {
   font-size: 20px;
   font-weight: bold;
@@ -1079,153 +1139,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-.contact .info {
-  width: 100%;
-  background: #fff;
-}
-
-.contact .info i {
-  font-size: 20px;
-  color: #45505b;
-  float: left;
-  width: 44px;
-  height: 44px;
-  background: #f5f5f2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-}
-
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #45505b;
-}
-
-.contact .info p {
-  padding: 0 0 0 60px;
-  margin-bottom: 0;
-  font-size: 14px;
-  color: #728394;
-}
-
-.contact .info .email,
-.contact .info .phone {
-  margin-top: 40px;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #e9c46a;
-  color: #fff;
-}
-
-.contact .php-email-form {
-  width: 100%;
-  background: #fff;
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 4px;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: #e9c46a;
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: #e9c46a;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Footer
