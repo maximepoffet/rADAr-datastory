@@ -307,16 +307,16 @@ h6 {
 
 #hero h1 {
   margin: 0;
-  font-size: 64px;
+  font-size: 80px;
   font-weight: 700;
   line-height: 56px;
-  color: #fffbef;
+  color: #e9c46a;
 }
 
 #hero p {
   color: #fffbef;
   margin: 15px 0 0 0;
-  font-size: 26px;
+  font-size: 36px;
   font-family: "Helvetica", sans-serif;
 }
 
