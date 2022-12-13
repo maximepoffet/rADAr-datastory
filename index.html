@@ -50,9 +50,9 @@
         <li><a href="#dataset" class="nav-link scrollto"><i class="bx bx-data"></i> <span>Dataset</span></a></li>
         <li><a href="#graph" class="nav-link scrollto"><i class="bx bx-network-chart"></i> <span>Temporality and graph analysis</span></a></li>
         <li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Clusters</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Usefull links</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-beer"></i> <span>Taste evolution</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-check-circle"></i> <span>Conclusion</span></a></li>
+        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-link-alt"></i> <span>Usefull links</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -144,6 +144,16 @@
           </div>
 
         </div>
+
+        </div>
+          <p>
+            However, we can see on the following histogram that a lot of users have very few ratings and few users make a large 
+            amout of them, it follows a power law. The super-users rate an amount of beers that is not possible for a single human,
+            they may therefore be an organization or even a bot. They will then need to be removed from the dataset. Users with only a
+            few rating are also to no use for our analysis as we cannot see their evolution.
+          </p>
+        </div>
+
 
         <div class="image">
           <object type="text/html" data="histogramstyle.html"  width=100% height=600px></object>
@@ -279,6 +289,33 @@
 
         <div class="section-title">
           <h2>Clusters</h2>
+          <p>
+            As we want to see the evolution of similar users, we cluster them on the beginning of their "career".
+            To do so, the K-means clustering is applied to the users represented as a 15-long vector containing 
+            the number of ratings in each categories. In doing so, the groups obtained represent users with similar starting tastes.
+          </p>
+        </div>
+        
+        <div class="section-title">
+          <h4>Choice of the number of clusters</h4>
+          <p>
+            As K-means requires the number of cluster to be set, we used the silhouette score to choose it in a way that will 
+            give well separated compact groups. By plotting the score for a reasonable range of cluster number, we can use the
+            elbow method to determine the best K.
+          </p>
+        </div>
+
+        <div class="section-title">
+          <p>
+            As it can be seen on the previous plot, the best number of clusters is 4. We can now apply the K-means algorithm.
+            The average vector representations for the 4 clusters can be seen on the following graph:
+          </p>
+        </div>
+
+        <div class="section-title">
+          <p>
+            We decided to personify these 4 average users, you can meet them by swiping in the following carousel:
+          </p>
         </div>
 
         <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -344,8 +381,10 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Taste evolution</h2>
+          <p>
+            We will analyse their evolution through their 500 ratings.
+          </p>
         </div>
 
       </div>
@@ -356,7 +395,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
+          <h2>Conclusion</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
