@@ -102,16 +102,90 @@
         </div>
 
         <div class="image">
-            <img src="assets/img/beeradvocate.png" class="img-fluid" alt="">
+            <img src="assets/img/beeradvocate.png" width=60% class="img-fluid" alt="">
+        </div>
+
+        <div class="section-title">
+          <p>The unprocessed dataset can be summarized with the following statistics:</p>
+        </div>
+
+        <div class="row  smaller">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bx bx-user"></i>
+              <span data-purecounter-start="0" data-purecounter-end="153704" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Users</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bx bx-message"></i>
+              <span data-purecounter-start="0" data-purecounter-end="8393032" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Reviews</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bx bx-beer"></i>
+              <span data-purecounter-start="0" data-purecounter-end="280823" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Beers</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bx bx-calendar"></i>
+              <span data-purecounter-start="0" data-purecounter-end="17" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Years</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="image">
+          <object type="text/html" data="histogramstyle.html"  width=100% height=600px></object>
         </div>
 
 
         <div class="section-title">
-          <p>To be able to extraxt meaningfull insight about the evolution of the users, they have been filtered to keep only relevant ones</p>
-          <p>The remaining dataset can be described as follow:</p>
+          <h3>Users filtering</h3>
+          <p>
+            For our results to be as meaningful as possible, we need to determine the proper subset of users on which we are going 
+            to conduct our analyses. As a matter of fact, not everyone posting an online review can be considered a beer expert and 
+            we need to impose some self-defined but yet solid criterias in order to be granted an expertise certificate. 
+            The filtering performed on the raw dataset can be divided into three different steps:      
+          </p>
+          <h4>Market selection:</h4>
+          <p>
+            We decided to narrow down our research on users based in the United States. They represent the vast majority (73.6%) of 
+            the website’s active community. This selection makes users more comparable in the sense that they share a common drinking 
+            culture and should have access to the same products.
+          </p>
+          <h4>Temporal validity:</h4>
+          <p>
+            The number of reviews written by a user is not a solid enough criteria to ensure that he/she went through an evolution of 
+            his/her beer taste. In fact, there are several users that were highly active during a very short period of time. 
+            We therefore required the time difference between the last and the first review to be at least one year. 
+            Moreover, we noticed the presence of several organizations on the website that would usually release many reviews 
+            on the same day and hence decided to threshold the number of daily reviews to 20. The latter is also a small way to 
+            filter out eventual spam accounts.
+          </p>
+          <h4>Expertise criteria:</h4>
+          <p>
+            In combination with the above filters, we decided that users can be called experts as soon as they have submitted their 
+            500th rating. Consequently, our analyses will focus on the evolution in the beer taste of users between their first and 
+            their 500th rating.
+          </p>
+        
+        </div>
+        <div class="section-title">
+          <p>The filtered dataset can now be summarized with the following statistics:</p>
         </div>
 
-        <div class="row">
+        <div class="row smaller">
 
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
@@ -187,13 +261,13 @@
         </div>
 
         <div class="image">
-          <object type="text/html" data="nx.html" width=702, height=702></object>
+          <object type="text/html" data="nx.html" width=702, height=732></object>
         </div>
         <div class="section-title">
-          <p>It can be seen that there is no single path, it could explain the lack of change in the ratios in the previous plot.
-            It is therefore necessary to cluster the different profiles to be able to extract the main patterns.</p>
+          <p>It can be seen that there is no single path, this could explain the lack of change in the ratios in the previous plot.
+            We can still see that the Wild/Sour beers are more appreciated by experienced users.
+            It is however necessary to cluster the different profiles to be able to extract the main patterns.</p>
         </div>
-
       </div>
 
       
