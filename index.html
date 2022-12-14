@@ -241,6 +241,7 @@
 
         <div class="section-title">
           <h2>Temporality and graph analysis</h2>
+          <h3>Categories popularity through the years</h3>
           <p>The popularity of the different beer is changing through the years, the following plot shows the percentage of rating for each category per year:</p>
         </div>
 
@@ -248,11 +249,106 @@
           <object type="text/html" data="ratio_cat_year.html"  width=2002, height=602></object>
         </div>
 
-        <div class="section-title">
-          <p>The rise in popularity of the IPAs is the most visible, but there is also the Stouts and the Wild/Sour beers. All other categories either stagnate or loose popularity.</p>
+        <div style="display: flex; margin: auto; width: 70%; margin-bottom: 2em; margin-top: 2em;">
+          
+          <div class="section-title smaller">
+            
+            <style>
+              table, th, td {
+              border:1px solid rgb(255, 255, 255);
+              }
+              #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+              #customers tr:hover {background-color: #ddd;}
+              #customers th {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background-color: #e9c46a;
+                color: white;
+              }
+            </style>
+            <body>          
+            <p>
+            <table style="width:100%" id="customers">
+              
+              <tr>
+                <th>Category</th>
+                <th>Linear regression coefficient [ % / year ]</th>
+              </tr>
+              <tr>
+                <td>India Pale Ales</td>
+                <td>1.64</td>
+              </tr>
+              <tr>
+                <td>Stouts</td>
+                <td>0.57</td>
+              </tr>
+              <tr>
+                <td>Wild/Sour Beers</td>
+                <td>0.37</td>
+              </tr>
+              <tr>
+                <td>Specialty Beer</td>
+                <td>0.05</td>
+              </tr>
+              <tr>
+                <td>Hybrid Beers</td>
+                <td>-0.01</td>
+              </tr>
+              <tr>
+                <td>Porters</td>
+                <td>-0.01</td>
+              </tr>
+              <tr>
+                <td>Weird Cocktail</td>
+                <td>-0.03</td>
+              </tr>
+              <tr>
+                <td>Bocks</td>
+                <td>-0.19</td>
+              </tr>
+              <tr>
+                <td>Strong Ales</td>
+                <td>-0.20</td>
+              </tr>
+              <tr>
+                <td>Brown Ales</td>
+                <td>-0.22</td>
+              </tr>
+              <tr>
+                <td>Dark Lagers</td>
+                <td>-0.23</td>
+              </tr>
+              <tr>
+                <td>Dark Ales</td>
+                <td>-0.24</td>
+              </tr>
+              <tr>
+                <td>Wheat Beers</td>
+                <td>-0.25</td>
+              </tr>
+              <tr>
+                <td>Pale Ales</td>
+                <td>-0.52</td>
+              </tr>
+              <tr>
+                <td>Pale Lagers</td>
+                <td>-0.71</td>
+              </tr>
+            </table>
+            </p>
+          </div>
+          <div style="width: 50%; text-align: left; margin-left: 2em;">
+            <h4>Linear regression coefficient in percent per year:</h4>
+            We can see that 4 categories; the Inda Pale Ales, the Stouts, the Wild/Sour beers and the Specialty beers, 
+            gain popularity through the years in detriment to the 11 others with the Pale Ales and Pale Lagers having the 
+            biggest downfall. It is therefore important to take that into account when comparing a user from the beginning of 
+            the website and a user from the end.
+          </div>
         </div>
 
         <div class="section-title">
+          <h3>Categories popularity vs. user expertise</h3>
           <p>The next plot shows the change in percent of ratings for each category through the user "career":</p>
         </div>
 
@@ -260,13 +356,104 @@
           <object type="text/html" data="ratio_cat_rating.html"  width=2002, height=602></object>
         </div>
 
-        <div class="section-title">
-          <p>The Wild/Sour beers seem to gain popularity when the users are more experienced, for the other category, the effect is less important.
-             However, There could be some crossing between multiple type of users artificially flattening the curves.
-          </p>
+        <div style="display: flex; margin: auto; width: 70%; margin-bottom: 2em; margin-top: 2em;">
+          
+          <div class="section-title smaller">
+            
+            <style>
+              table, th, td {
+              border:1px solid rgb(255, 255, 255);
+              }
+              #customers tr:nth-child(even){background-color: #f2f2f2;}
+      
+              #customers tr:hover {background-color: #ddd;}
+              #customers th {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background-color: #e9c46a;
+                color: white;
+              }
+            </style>
+            <body>          
+            <p>
+            <table style="width:100%" id="customers">
+              
+              <tr>
+                <th>Category</th>
+                <th>Linear regression coefficient [ % / 10 ratings ]</th>
+              </tr>
+              <tr>
+                <td>Wild/Sour Beers</td>
+                <td>0.11</td>
+              </tr>
+              <tr>
+                <td>Stouts</td>
+                <td>0.03</td>
+              </tr>
+              <tr>
+                <td>Pale Ales</td>
+                <td>0.02</td>
+              </tr>
+              <tr>
+                <td>Porters</td>
+                <td>0.01</td>
+              </tr>
+              <tr>
+                <td>India Pale Ales</td>
+                <td>0.01</td>
+              </tr>
+              <tr>
+                <td>Weird Cocktail</td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td>Hybrid Beers</td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td>Specialty Beer</td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td>Bocks</td>
+                <td>-0.01</td>
+              </tr>
+              <tr>
+                <td>Dark Ales</td>
+                <td>-0.01</td>
+              </tr>
+              <tr>
+                <td>Strong Ales</td>
+                <td>-0.02</td>
+              </tr>
+              <tr>
+                <td>Wheat Beers</td>
+                <td>-0.02</td>
+              </tr>
+              <tr>
+                <td>Brown Ales</td>
+                <td>-0.02</td>
+              </tr>
+              <tr>
+                <td>Dark Lagers</td>
+                <td>-0.02</td>
+              </tr>
+              <tr>
+                <td>Pale Lagers</td>
+                <td>-0.05</td>
+              </tr>
+            </table>
+            </p>
+          </div>
+          <div style="width: 50%; text-align: left; margin-left: 2em;">
+            <h4>Linear regression coefficient in percent per 10 ratings:</h4>
+              The Wild/Sour beers seem to gain popularity when the users are more experienced, for the other category, the effect is less important.
+              However, There could be some crossing between multiple type of users artificially flattening the curves. 
+          </div>
         </div>
 
         <div class="section-title">
+          <h3>Users favorite beer change</h3>
           <p>To show the transition in taste between the beginner user and when he's gained experienced, here's a graph showing the transitions:</p>
         </div>
 
