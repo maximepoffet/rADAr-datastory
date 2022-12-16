@@ -515,7 +515,7 @@ section {
   margin: auto;
   width: 90%;
   margin-bottom: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .dataset .count-box i {
@@ -573,7 +573,7 @@ section {
   justify-content: center;
   margin: auto;
   width: 90%;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .graph .count-box i {
@@ -665,6 +665,15 @@ section {
   width: 70%;
   margin: auto;
 
+}
+
+.dataset .image {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 90%;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .resume .resume-item {
@@ -951,7 +960,7 @@ section {
 --------------------------------------------------------------*/
 .services .icon-box {
   text-align: center;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 2px;
   transition: all ease-in-out 0.1s;
   background: rgb(255, 255, 255);
   box-shadow: 0px 5px 30px 0px rgba(110, 123, 131, 0.05);
@@ -1095,7 +1104,7 @@ section {
   margin: auto;
   width: 90%;
   margin-bottom: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .testimonials .section-header {

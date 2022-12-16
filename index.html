@@ -483,28 +483,46 @@
           <p>
             As we want to see the evolution of similar users, we cluster them on the beginning of their "career".
             To do so, the K-means clustering is applied to the users represented as a 15-long vector containing 
-            the number of ratings in each categories. In doing so, the groups obtained represent users with similar starting tastes.
+            the number of ratings in each categories in the 50 first ratings. In doing so, the groups obtained represent users with similar starting tastes.
           </p>
         </div>
         
         <div class="section-title">
-          <h4>Choice of the number of clusters</h4>
+          <h3>Choice of the number of clusters</h3>
           <p>
             As K-means requires the number of cluster to be set, we used the silhouette score to choose it in a way that will 
             give well separated compact groups. By plotting the score for a reasonable range of cluster number, we can use the
-            elbow method to determine the best K.
+            elbow method to determine the best K. The following plot shows us that a pertinent choice of K is 4.
+          </p>
+        </div>
+
+        <div class="image">
+          <object type="text/html" data="elbow_curve.html" width=910, height=520></object>
+        </div>
+
+
+        <div class="section-title">
+          <h3>Visualisation of the clusters</h3>
+          <p>
+            We can now apply the K-means algorithm and plot the average vector representations for the 4 clusters on the following figure:
           </p>
         </div>
 
         <div class="section-title">
           <p>
-            As it can be seen on the previous plot, the best number of clusters is 4. We can now apply the K-means algorithm.
-            The average vector representations for the 4 clusters can be seen on the following graph:
+            The clusters cannot be directly visualized as they reside in a 15-dimmensions space. With the help of Principal Component Analyses (PCA), we are able 
+            to project thoses dimmensions onto only three significant ones. 
           </p>
         </div>
 
         <div class="image">
           <object type="text/html" data="cluster_3dvisual.html" width=1102, height=620></object>
+        </div>
+        <div class="section-title">
+          <p>
+            With the PCA projections, we can see that there are three "specialized" clusters with each a favorite beer (IPA, Stout and Pale Lagers) and a "generalist"
+            cluster in the middle with a more spread-out distribution of ratings but still a slight preference for Pale Ales.
+          </p>
         </div>
 
         <div class="section-title">
@@ -572,15 +590,27 @@
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
+    <section id="resume" class="graph">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>Taste evolution</h2>
           <p>
-            We will analyse their evolution through their 500 ratings.
+            The next plot shows their evolution through their 500 ratings.
           </p>
         </div>
+
+        <div class="image">
+          <object type="text/html" data="ratio_cat_num_clusters.html" width=1010, height=620></object>
+        </div>
+        <div class="section-title">
+          <p>
+            With the clusters, the changes that compensated themselves in the overall analysis are revealed. However, as we will see in the following graphs, 
+            the members of a cluster don't allways take the same path to expertise. Indeed, as the clusters were defined on the 50 first ratings, there is no 
+            assurance that they will stay similar. Some changes in taste may then still be hidden.
+          </p>
+        </div>
+
 
       </div>
     </section><!-- End Resume Section -->
@@ -608,7 +638,7 @@
 
         <div class="row" >
 
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="50">
             <div class="icon-box iconbox-blue" style="width: 100%">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -620,7 +650,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="50">
             <div class="icon-box iconbox-blue" style="width: 100%">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
