@@ -430,9 +430,9 @@
         <div class="section-title">
           <h2>Clusters</h2>
           <p>
-            As we want to see the evolution of similar users, we cluster them on the beginning of their "career".
-            To do so, the K-means clustering is applied to the users represented as a 15-long vector containing 
-            the number of ratings in each categories in the 50 first ratings. In doing so, the groups obtained represent users with similar starting tastes.
+            As we want to see the evolution of similar users, we cluster them on the beginning of their "career". 
+            To do so, the K-means clustering is applied to the users represented as a 15-long vector containing the number of 
+            ratings in each category in the 50 first ratings. By doing so, the resulting clusters represent users with similar starting tastes.
           </p>
         </div>
         
@@ -478,6 +478,25 @@
           <h4>Cluster 3:</h4>
           <p>
             The last cluster drinks and rates mainly Pale Lagers.
+          </p>
+        </div>
+
+
+        <div class="section-title">
+          <p>
+            The clusters cannot be directly visualized as they reside in a 15-dimmensions space. With the help of Principal Component Analyses (PCA) 
+            and UMAP, we are able to project thoses dimmensions onto only two significant ones. 
+          </p>
+        </div>
+
+        <div class="image">
+          <object type="text/html" data="umap_pca.html" width=1010, height=620></object>
+        </div>
+
+        <div class="section-title">
+          <p>
+            With both projections, we can see that there are three "specialized" clusters with each a favorite beer (IPA, Stout and Pale Lagers) and a "generalist"
+            cluster in the middle with a more spread-out distribution of ratings but still a slight preference for Pale Ales.
           </p>
         </div>
 
@@ -544,34 +563,7 @@
         </div>
 
 
-        <div class="image">
-          <object type="text/html" data="all_first_vs_last.html" width=1010, height=620></object>
-        </div>
-
-        <div class="section-title">
-          <h3>Visualisation of the p-values</h3>
-        </div>
-        <div class="image">
-          <object type="text/html" data="heatmap_pval.html" width=1010, height=620></object>
-        </div>
-
-        <div class="section-title">
-          <p>
-            The clusters cannot be directly visualized as they reside in a 15-dimmensions space. With the help of Principal Component Analyses (PCA) 
-            and UMAP, we are able to project thoses dimmensions onto only two significant ones. 
-          </p>
-        </div>
-
-        <div class="image">
-          <object type="text/html" data="umap_pca.html" width=1010, height=620></object>
-        </div>
-
-        <div class="section-title">
-          <p>
-            With both projections, we can see that there are three "specialized" clusters with each a favorite beer (IPA, Stout and Pale Lagers) and a "generalist"
-            cluster in the middle with a more spread-out distribution of ratings but still a slight preference for Pale Ales.
-          </p>
-        </div>
+        
         
 
       </div>
@@ -583,6 +575,22 @@
 
         <div class="section-title">
           <h2>Taste evolution</h2>
+
+        </div>
+
+        <div class="image">
+          <object type="text/html" data="all_first_vs_last.html" width=1010, height=620></object>
+        </div>
+
+        <div class="section-title">
+          <h3>Visualisation of the p-values</h3>
+        </div>
+        <div class="image">
+          <object type="text/html" data="heatmap_pval.html" width=1010, height=620></object>
+        </div>
+
+
+        <div class="section-title">
           <p>
             The next plot shows their evolution through their 500 ratings.
           </p>
