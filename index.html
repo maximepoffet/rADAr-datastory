@@ -180,8 +180,8 @@
           <p>
             For our results to be as meaningful as possible, we need to determine the proper subset of users on which we are going 
             to conduct our analyses. As a matter of fact, not everyone posting an online review can be considered a beer expert and 
-            we need to impose some self-defined but yet solid criterias in order to be granted an expertise certificate. 
-            The filtering performed on the raw dataset can be divided into three different steps:      
+            we need to impose some self-defined but yet solid criterias to define expertiseness. The filtering performed on the raw 
+            dataset can be divided into four different steps:     
           </p>
           <h4>Market selection:</h4>
           <p>
@@ -189,20 +189,24 @@
             the website’s active community. This selection makes users more comparable in the sense that they share a common drinking 
             culture and should have access to the same products.
           </p>
-          <h4>Temporal validity:</h4>
+          <h4>Expertise:</h4>
           <p>
-            The number of reviews written by a user is not a solid enough criteria to ensure that he/she went through an evolution of 
-            his/her beer taste. In fact, there are several users that were highly active during a very short period of time. 
-            We therefore required the time difference between the last and the first review to be at least one year. 
-            Moreover, we noticed the presence of several organizations on the website that would usually release many reviews 
-            on the same day and hence decided to threshold the number of daily reviews to 20. The latter is also a small way to 
-            filter out eventual spam accounts.
+            We decided that users can be called experts as soon as they have submitted 500 ratings on the website. Consequently, our 
+            analyses will focus on the evolution in the beer taste of users between their 1st and their 500th rating. 
           </p>
-          <h4>Expertise criteria:</h4>
+          <h4>Evolution:</h4>
           <p>
-            In combination with the above filters, we decided that users can be called experts as soon as they have submitted their 
-            500th rating. Consequently, our analyses will focus on the evolution in the beer taste of users between their first and 
-            their 500th rating.
+            The number of reviews written by users is not a solid enough criteria to ensure a temporal evolution of their beer taste. 
+            For example, there are several users that were highly active during a very short period of time. We therefore required that 
+            users were active on the website for at least 100 different days. Moreover, to guarantee a temporal evolution that is not too 
+            short and not too long for 500 ratings, we filtered out users that took less than 1 year and more than 7 years to submit their 500 ratings.
+          </p>
+          <h4>Normal behavior:</h4>
+          <p>
+            We noticed the presence of several organizations on the website that would usually release many reviews on the same day and 
+            hence decided to threshold the number of daily reviews to 70. For the reviews to be more spread out through time, we also 
+            decided to filter out reviewers who rated more than 70 beers in one single month. These two criterias are also a small way 
+            to filter out eventual spam accounts.
           </p>
         
         </div>
@@ -215,15 +219,15 @@
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="bx bx-user"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1646" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Users</p>
+              <span data-purecounter-start="0" data-purecounter-end="970" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Relevant users</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="bx bx-message"></i>
-              <span data-purecounter-start="0" data-purecounter-end="832000" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="485000" data-purecounter-duration="1" class="purecounter"></span>
               <p>Reviews</p>
             </div>
           </div>
@@ -452,6 +456,94 @@
             We can now apply the K-means algorithm and plot the average vector representations for the 4 clusters on the following figure:
           </p>
         </div>
+
+        <div class="image">
+          <object type="text/html" data="centroid_first.html" width=910, height=520></object>
+        </div>
+
+        <div class="section-title">
+          <h4>Cluster 0:</h4>
+          <p>
+            The members of this cluster have a clear preference for the beers in the IPA category, the other ones are less represented.
+            The Stouts and strong ales are the most rated from the lesser represented categories.
+          </p>
+          <h4>Cluster 1:</h4>
+          <p>
+            The second cluster is the most balanced with nonetheless some categories that stand out; The Pale Ales, India Pale Ales and Strong Ales.
+          </p>
+          <h4>Cluster 2:</h4>
+          <p>
+            The third one has two favorites, the main one is the Stout category and the second one is the Stouts. All the other categories lack representation.
+          </p>
+          <h4>Cluster 3:</h4>
+          <p>
+            The last cluster drinks and rates mainly Pale Lagers.
+          </p>
+        </div>
+
+
+        <div class="section-title">
+          <p>
+            We decided to personify these 4 average users, you can meet them by swiping in the following carousel:
+          </p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/ipa.png" class="testimonial-img" alt="">
+                <h3>Cluster 0:<br>Jean-Michel IPA</h3>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    I'm an hipster and the only thing I like is IPAs
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/ada.jpg" class="testimonial-img" alt="">
+                <h3>Cluster 1:<br>Ada the explorer</h3>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      I like to explore the different styles of beers
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/stout.png" class="testimonial-img" alt="">
+                <h3>Cluster 2:<br>Marcel Stout</h3>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    I'm tough and I drink stouts
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/lager.png" class="testimonial-img" alt="">
+                <h3>Cluster 3:<br>James Bland</h3>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      I just started drinking beer and enjoy mainly Pale Lagers
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+
         <div class="image">
           <object type="text/html" data="all_first_vs_last.html" width=1010, height=620></object>
         </div>
@@ -480,67 +572,7 @@
             cluster in the middle with a more spread-out distribution of ratings but still a slight preference for Pale Ales.
           </p>
         </div>
-
-        <div class="section-title">
-          <p>
-            We decided to personify these 4 average users, you can meet them by swiping in the following carousel:
-          </p>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/ipa.png" class="testimonial-img" alt="">
-                <h3>Jean-Michel IPA</h3>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    I'm an hipster and the only thing I like is IPAs
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/stout.png" class="testimonial-img" alt="">
-                <h3>Marcel Stout</h3>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    I'm tough and I drink stouts
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/ada.jpg" class="testimonial-img" alt="">
-                <h3>Ada the explorer</h3>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      I like to explore the different styles of beers
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/lager.png" class="testimonial-img" alt="">
-                <h3>James Bland</h3>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      I just started drinking beer and enjoy mainly Pale Lagers
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
+        
 
       </div>
     </section><!-- End Testimonials Section -->
