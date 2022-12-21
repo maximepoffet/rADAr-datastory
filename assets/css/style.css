@@ -9,8 +9,8 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'Helvetica', sans-serif;
-  color: #1B1C1E;
+  font-family: 'Helvetica','serif';
+  color: #404040;
 }
 
 a {
@@ -29,7 +29,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Helvetica','sans-serif';
+  color: #404040;
 }
 
 /*--------------------------------------------------------------
@@ -370,6 +371,7 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
+  background-color: #fff;
 }
 
 
@@ -383,12 +385,12 @@ section {
   text-align: justify;
   font-size: 22px;
   font-weight: bold;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   margin-top: 20px;
   padding-top: 20px;
   margin: auto;
   position: relative;
-  color: #1B1C1E;
+  color: #404040;
 }
 
 .section-title h4 {
@@ -400,7 +402,7 @@ section {
   padding-top: 20px;
   margin: auto;
   position: relative;
-  color: #1B1C1E;
+  color: #404040;
 }
 .section-title h5 {
   width: 70%;
@@ -410,17 +412,17 @@ section {
   padding-top: 20px;
   margin: auto;
   position: relative;
-  color: #1B1C1E;
+  color: #404040;
 }
 
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #1B1C1E;
+  color: #404040;
 }
 
 .section-title h2::before {
@@ -515,7 +517,8 @@ section {
   margin: auto;
   width: 90%;
   margin-bottom: 30px;
-  padding-bottom: 20px;
+  margin-top: 30px;
+  padding-bottom: 0px;
 }
 
 .dataset .count-box i {
@@ -1008,7 +1011,7 @@ section {
 }
 
 .services .icon-box h4 a {
-  color: #1B1C1E;
+  color: #404040;
   transition: ease-in-out 0.3s;
 }
 
