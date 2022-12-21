@@ -64,6 +64,7 @@
       <h1>Road to beer expert</h1>
       <!--<p>My favourite beer is <span class="typed" data-typed-items="an IPA, a Pale Ale, a Stout, a Wild/Sour, a Bock, a Dark Ale, "></span></p>-->
       <p>How do beer tastes evolve through time?</p>
+      <!--<p>My favourite beer is <span class="typed" data-typed-items="an IPA, a Pale Ale, a Stout, a Wild/Sour, a Bock, a Dark Ale, a Porter, a Dark Lager, a Wheat Beer"></span></p>-->
       <p>
         <small class="ml-3"><b>By:</b></small>
         <small class="ml-3">Pascal Epple,</small>
@@ -98,12 +99,26 @@
 
         <div class="section-title">
           <h2>dataset</h2>
-          <p>The dataset used comes from the BeerAdvocate website, here is a preview of the front page:</p>
         </div>
 
-        <div class="image">
-            <img src="assets/img/beeradvocate.png" width=60% class="img-fluid" alt="">
+
+        <div style="display: flex; margin: auto; width: 70%; margin-bottom: 2em; margin-top: 2em;">
+          <div class="image">
+            <img src="assets/img/beeradvocate.png" width=100% class="img-fluid" alt="">
+          </div>
+          
+            
+          <div style="width: 50%; text-align: left; margin-left: 2em;">
+            <div style="text-align: justify;">
+              The dataset consists of beer reviews from BeerAdvocate, one of the largest online beer-related websites, where thousands of users 
+              rate thousands of beers. The ratings are a weighted average of five different aspects rated by the reviewers: look, smell/aroma, 
+              taste, feel/palate and overall. Moreover, users are free to leave a textual comment. The dataset contains every single submitted 
+              review between 2001 and 2017. A preview of the front page can be seen on the left.
+            </div>
+          </div>
         </div>
+
+
 
         <div class="section-title">
           <p>The unprocessed dataset can be summarized with the following statistics:</p>
@@ -249,105 +264,14 @@
           <object type="text/html" data="ratio_cat_year.html"  width=2002, height=602></object>
         </div>
 
-        <div style="display: flex; margin: auto; width: 70%; margin-bottom: 2em; margin-top: 2em;">
-          
-          <div class="section-title smaller">
-            
-            <style>
-              table, th, td {
-              border:1px solid rgb(255, 255, 255);
-              }
-              #customers tr:nth-child(even){background-color: #f2f2f2;}
-      
-              #customers tr:hover {background-color: #ddd;}
-              #customers th {
-                padding-top: 10px;
-                padding-bottom: 10px;
-                background-color: #e9c46a;
-                color: white;
-              }
-            </style>
-            <body>          
-            <p>
-            <table style="width:100%" id="customers">
-              
-              <tr>
-                <th>Category</th>
-                <th>Linear regression <br>coefficient [ % / year ]</th>
-              </tr>
-              <tr>
-                <td>India Pale Ales</td>
-                <td>1.64</td>
-              </tr>
-              <tr>
-                <td>Stouts</td>
-                <td>0.57</td>
-              </tr>
-              <tr>
-                <td>Wild/Sour Beers</td>
-                <td>0.37</td>
-              </tr>
-              <tr>
-                <td>Specialty Beer</td>
-                <td>0.05</td>
-              </tr>
-              <tr>
-                <td>Hybrid Beers</td>
-                <td>-0.01</td>
-              </tr>
-              <tr>
-                <td>Porters</td>
-                <td>-0.01</td>
-              </tr>
-              <tr>
-                <td>Weird Cocktail</td>
-                <td>-0.03</td>
-              </tr>
-              <tr>
-                <td>Bocks</td>
-                <td>-0.19</td>
-              </tr>
-              <tr>
-                <td>Strong Ales</td>
-                <td>-0.20</td>
-              </tr>
-              <tr>
-                <td>Brown Ales</td>
-                <td>-0.22</td>
-              </tr>
-              <tr>
-                <td>Dark Lagers</td>
-                <td>-0.23</td>
-              </tr>
-              <tr>
-                <td>Dark Ales</td>
-                <td>-0.24</td>
-              </tr>
-              <tr>
-                <td>Wheat Beers</td>
-                <td>-0.25</td>
-              </tr>
-              <tr>
-                <td>Pale Ales</td>
-                <td>-0.52</td>
-              </tr>
-              <tr>
-                <td>Pale Lagers</td>
-                <td>-0.71</td>
-              </tr>
-            </table>
-            </p>
-          </div>
-          <div style="width: 50%;  margin-left: 2em;">
-            <h4>Linear regression coefficient in percent per year:</h4>
-            <div style="text-align: justify;">
-              We can see that 4 categories; the Inda Pale Ales, the Stouts, the Wild/Sour beers and the Specialty beers, 
-              gain popularity through the years in detriment to the 11 others with the Pale Ales and Pale Lagers having the 
-              biggest downfall. It is therefore important to take that into account when comparing a user from the beginning of 
-              the website and a user from the end.
-            </div>
-          </div>
+        <div class="section-title">
+          <p>We can see that 4 categories; the Inda Pale Ales, the Stouts, the Wild/Sour beers and the Specialty beers, 
+            gain popularity through the years in detriment to the 11 others with the Pale Ales and Pale Lagers having the 
+            biggest downfall. It is therefore important to take that into account when comparing a user from the beginning of 
+            the website and a user from the end.
+          </p>
         </div>
+
 
         <div class="section-title">
           <h3>Categories popularity vs. user expertise</h3>
@@ -382,67 +306,83 @@
               
               <tr>
                 <th>Category</th>
-                <th>Linear regression <br>coefficient [ % / 10 ratings ]</th>
+                <th>Linear regression<br>coefficient<br>[ % / 10 ratings ]</th>
+                <th>P-values</th>
               </tr>
               <tr>
                 <td>Wild/Sour Beers</td>
                 <td>0.11</td>
+                <td>2.135020e-24</td>
               </tr>
               <tr>
                 <td>Stouts</td>
                 <td>0.03</td>
+                <td>4.214265e-06</td>
               </tr>
               <tr>
                 <td>Pale Ales</td>
                 <td>0.02</td>
+                <td>1.324560e-05</td>
               </tr>
               <tr>
                 <td>Porters</td>
                 <td>0.01</td>
+                <td>4.503884e-03</td>
               </tr>
               <tr>
                 <td>India Pale Ales</td>
                 <td>0.01</td>
+                <td>2.556209e-02</td>
               </tr>
               <tr>
                 <td>Weird Cocktail</td>
                 <td>0.00</td>
+                <td>5.879365e-08</td>
               </tr>
               <tr>
                 <td>Hybrid Beers</td>
                 <td>0.00</td>
+                <td>1.680010e-01</td>
               </tr>
               <tr>
                 <td>Specialty Beer</td>
                 <td>0.00</td>
+                <td>1.679047e-01</td>
               </tr>
               <tr>
                 <td>Bocks</td>
                 <td>-0.01</td>
+                <td>8.955377e-08</td>
               </tr>
               <tr>
                 <td>Dark Ales</td>
                 <td>-0.01</td>
+                <td>2.686648e-11</td>
               </tr>
               <tr>
                 <td>Strong Ales</td>
                 <td>-0.02</td>
+                <td>4.803162e-03</td>
               </tr>
               <tr>
                 <td>Wheat Beers</td>
                 <td>-0.02</td>
+                <td>1.218805e-08</td>
               </tr>
               <tr>
                 <td>Brown Ales</td>
                 <td>-0.02</td>
+                <td>5.227597e-10</td>
               </tr>
               <tr>
                 <td>Dark Lagers</td>
                 <td>-0.02</td>
+                <td>3.738774e-11</td>
               </tr>
               <tr>
                 <td>Pale Lagers</td>
                 <td>-0.05</td>
+                <td>6.549360e-10</td>
               </tr>
             </table>
             </p>
@@ -458,7 +398,12 @@
 
         <div class="section-title">
           <h3>Users favorite beer evolution</h3>
-          <p>To show the transition in taste between the beginner user and when he's gained experienced, here's a graph showing the transitions:</p>
+          <p>
+            To show the transition in taste between the beginner user and when he's gained experienced, the following graph shows an edge for each transition. 
+            Furthermore, the edges width shows the number of users taking the path and the size of the nodes represent the ratio of users ending up on this 
+            category over users starting.<br>
+            By howering on the edges or nodes, the statistics are revealed.
+          </p>
         </div>
 
         <div class="image">
@@ -466,7 +411,7 @@
         </div>
         <div class="section-title">
           <p>It can be seen that there is no single path, this could explain the lack of change in the ratios in the previous plot.
-            We can still see that the Wild/Sour beers are more appreciated by experienced users.
+            We can still see that the Wild/Sour beers are more appreciated by experienced users, thus having a larger node.
             It is however necessary to cluster the different profiles to be able to extract the main patterns.</p>
         </div>
       </div>
@@ -520,8 +465,8 @@
 
         <div class="section-title">
           <p>
-            The clusters cannot be directly visualized as they reside in a 15-dimmensions space. With the help of Principal Component Analyses (PCA) and UMAP, we are able 
-            to project thoses dimmensions onto only two significant ones. 
+            The clusters cannot be directly visualized as they reside in a 15-dimmensions space. With the help of Principal Component Analyses (PCA) 
+            and UMAP, we are able to project thoses dimmensions onto only two significant ones. 
           </p>
         </div>
 
@@ -623,6 +568,13 @@
         </div>
         <div class="section-title">
           <h3>Favorite beer transitions in the clusters</h3>
+          <p>
+            The following graphs show the evolutions in taste for the users in each clusters.
+            In the same way as for the general graph, the edges represent the transition in favorite beer from the 50 firsts to the 50 lasts for each users. 
+            The edge width shows the number of users taking this path and the size of the nodes represent the ratio of users ending up on this category over 
+            users starting.<br>
+            By howering on the edges or nodes, the statistics are revealed.
+          </p>
         </div>
         <div class="image">
           
