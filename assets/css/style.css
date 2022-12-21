@@ -900,6 +900,11 @@ section {
   padding-top: 40px;
 }
 
+.round-img {
+  width: 120px;
+  border-radius: 50%;
+}
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
