@@ -519,6 +519,8 @@ section {
   margin-bottom: 30px;
   margin-top: 30px;
   padding-bottom: 0px;
+  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .dataset .count-box i {
@@ -577,6 +579,8 @@ section {
   margin: auto;
   width: 90%;
   padding-bottom: 20px;
+  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .graph .count-box i {
@@ -677,6 +681,8 @@ section {
   width: 90%;
   margin-bottom: 30px;
   padding-bottom: 20px;
+  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .resume .resume-item {
@@ -1113,6 +1119,8 @@ section {
   width: 90%;
   margin-bottom: 30px;
   padding-bottom: 20px;
+  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .testimonials .section-header {
