@@ -164,7 +164,7 @@
 
 
         </div class="section-title">
-          <p>
+          <p style="text-align: justify">
             However, we can see on the following histogram that a lot of users have very few ratings and few users make a large 
             amout of them, it follows a power law. The super-users rate an amount of beers that is not possible for a single human,
             they may therefore be an organization or even a bot. They will then need to be removed from the dataset. Users with only a
@@ -401,8 +401,8 @@
           <div style="width: 40%; text-align: left; margin-left: 2em; padding-top: 12%;">
             <h4>Linear regression coefficient in percent per 10 ratings:</h4>
             <div style="text-align: justify;">
-              The Wild/Sour beers seem to gain popularity when the users are more experienced, for the other category, the effect is less important.
-              However, There could be some crossing between multiple type of users artificially flattening the curves. 
+              The Wild/Sour beers seem to gain popularity when the users are more experienced, for the other categories, the effect is less important. 
+              However, there could be some crossing between multiple type of users artificially flattening the curves. 
             </div>
           </div>
         </div>
@@ -582,10 +582,23 @@
 
         <div class="section-title">
           <h2>Taste evolution</h2>
+          <h3>First and last 50 beers</h3>
           <p>
-            In order to have a better understanding on the evolution taste for each team (namely Jean-Michel IPA, Marcel Stout, 
-            James Bland and Ada the explorer team), we consider a plot that shows the categories of beers that a given team rates 
-            for their first 50 ratings versus their last 50 ratings.
+            In this plot we visualize the taste progression of the users. Each user was categorized into one of the four clusters presented above. 
+            During the 50 first ratings of their “career” we plot the average number of beers rated from each category (green line). 
+            We can already see that depending on the cluster a user is in, there are many differences.
+            Then we plot the average number of beers rated during the 50 last ratings (450 to 499) for each cluster. 
+            Note that the people present in each cluster are the same, we just look at their last ratings. 
+            This plot shows that the taste of the average user has evolved (e.g. the team “James Bland” have given up drinking Pale lagers and prefer now IPA’s). 
+            Furthermore, we see that depending on the initial “team” of a user, its taste hasn't evolved the same. As an example the team “James Bland” 
+            started drinking some dark lager beers while the “Marcel Stout” haven’t changed their habits at all regarding this category. 
+
+            We also added a plot showing all users together (independently of their team). This plot shows only small changes from first to last ratings 
+            in most of the categories.  However, it is interesting to notice that many changes happened in each team, which are not visible in the 
+            overall graph, giving credit to the idea of clustering the users. 
+            Furthermore, we notice a large increase in the interest in the Wild/Sour category, confirming that this category is reserved to “experts”. 
+
+            Each plot also shows 95% confidence intervals. These intervals were computed using bootstrap resampling in each cluster. 
           </p>
 
         </div>
@@ -595,16 +608,39 @@
         </div>
 
         <div class="section-title">
+          <h4>Ada the explorer team:</h4>
           <p>
-            A general behaviour that we can observe is that each team start to have a higher interest in Wild/Sour beers.
-            For the team “Ada the explorer”, we note that overall there is no huge difference between the first and last 50 ratings. 
-            dWe can see that IPA and Sout beers are more considering by this team [...]
+            We note that overall, there is no huge difference between the first and last 50 ratings. We can see that there are some few increasing 
+            in the number of ratings for the IPA (around 2%) and for Stout (around 1%) beers. We may also notice that there is a small decreasing 
+            for the Wild/Sour beers.
+          </p>
+          <h4>James Bland team</h4>
+          <p>
+            This is the most interesting team. We can clearly see a shift of the Pale Lagers beers to the IPA beers. At first, the members of this 
+            team had a strong interest for Pale Lagers beers. Then, this interest fades out and the IPA beers interest drastically increases.
+          </p>
+          <h4>Jean-Michel IPA team:</h4>
+          <p>
+            For this team, we can observe that the interest of the IPA beers clearly decreases (from 22.8% to 16.1%). The members of this team seem 
+            to still like this category, but this interest is less than before. Their tastes are increasing in favour of Stout beers and also Wild/ Sour beers.
+          </p>
+          <h4>Marcel Stout team:</h4>
+          <p>
+            The behaviour of this team is quite the opposite of the behaviour of Jean-Michel's IPA team in that instead of having an increase in interest 
+            in Stout beers and a decrease in interest in IPA beers. We have the opposite. In this team, tastes are increasing for IPA beers 
+            (increase of about 2.5%) and there is clearly a decrease for Stout beers (about 4%).
           </p>
 
         </div>
 
         <div class="section-title">
           <h3>Visualisation of the p-values</h3>
+          <p>
+            The following heatmap complements the plot above, showing the confidence we have in changes in each category of each cluster. 
+            We computed the P-value of the null hypothesis that there is no change between the first and last ratings. 
+            Since there are some extremely small values, spanning large orders of magnitude, we decided to take the logarithm and to clip some values. 
+            Values of 0 are statistically insignificant (p>0.05) and values of 20 are p values smaller than 10^-20.
+          </p>
         </div>
         <div class="image">
           <object type="text/html" data="heatmap_pval.html" width=1010, height=620></object>
@@ -638,12 +674,12 @@
           </p>
         </div>
         <div class="image">     
-          <object type="text/html" data="nx_0.html" width=502, height=552></object>
-          <object type="text/html" data="nx_1.html" width=502, height=552></object>
+          <object type="text/html" data="nx_0.html" width=502, height=552 style="margin: 10px 10px 10px 10px"></object>
+          <object type="text/html" data="nx_1.html" width=502, height=552 style="margin: 10px 10px 10px 10px"></object>
         </div>
         <div class="image">
-          <object type="text/html" data="nx_2.html" width=502, height=552></object>
-          <object type="text/html" data="nx_3.html" width=502, height=552></object>
+          <object type="text/html" data="nx_2.html" width=502, height=552 style="margin: 10px 10px 10px 10px"></object>
+          <object type="text/html" data="nx_3.html" width=502, height=552 style="margin: 10px 10px 10px 10px"></object>
         </div>
 
       </div>
