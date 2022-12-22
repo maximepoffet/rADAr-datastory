@@ -1226,7 +1226,7 @@ section {
   margin: auto;
   margin-right: -1px;
   margin-left:-1px;
-  width: 250px;
+  width: 100px;
   height: 5px;
   background-color: rgb(0, 0, 0) ;
   border-radius: 100px;
@@ -1259,10 +1259,14 @@ section {
 }
 
 .beers{
-  display: flex;
-  text-align:center;
-  
-
+  margin: auto;
+  padding-top: 16px;
+  width: 150px;
+  height: 120px;
+  /*display: flex;*/
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 
