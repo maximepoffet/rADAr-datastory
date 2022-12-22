@@ -1210,6 +1210,67 @@ section {
   }
 }
 
+.comparison {
+  display: flex;
+  margin: auto;
+  width: 1000px;
+  height: 180px;
+  background-color: rgb(247,247,247) ;
+  border-radius: 100px;
+  margin-bottom:30px;
+  position:relative;
+}
+
+.arrow {
+  display: flex;
+  margin: auto;
+  margin-right: -1px;
+  margin-left:-1px;
+  width: 250px;
+  height: 5px;
+  background-color: rgb(0, 0, 0) ;
+  border-radius: 100px;
+  margin-bottom:87.5px;
+  position:relative;
+}
+.arrow1 {
+  display: flex;
+  margin:auto;
+  margin-right: 0px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0) ;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 100px;
+  margin-bottom:75px;
+  position:relative;
+}
+.arrow2 {
+  display: flex;
+  margin:auto;
+  margin-left: 0px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0) ;
+  border: 5px solid rgb(0, 0, 0);
+  border-radius: 100px;
+  margin-bottom:75px;
+  position:relative;
+}
+
+.beers{
+  display: flex;
+  text-align:center;
+  
+
+}
+
+
+.round-img {
+  width: 120px;
+  border-radius: 50%;
+}
+
 
 /*--------------------------------------------------------------
 # Footer
