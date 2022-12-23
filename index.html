@@ -99,13 +99,13 @@
           </p>
         </div>
         <div class="section-title">
-          <h3>Why it matters</h3>
+          <h3>Why does it matter</h3>
           <p>
-            Understanding how people's preferences for different types of beer evolve over time can help businesses in the beer 
-            industry to make targeted advertising and respond to changing consumer preferences. By understanding the factors that 
-            influence changes in preferences, breweries can tailor their products to better meet the evolving needs and desires of their customers.
-            For each user, knowing their current preferences and potential future preferences for beer can help them in order to make 
-            better choices as they continue to try new types and expand their horizons.
+            It is of interest to two organizations involved in the beer industry to understand how people’s preference for beer changes over time.<br>
+            On one hand, it can help beer businesses to make targeted advertising and better respond to changing consumer preferences. 
+            By understanding the factors that influence their preferences, breweries can tailor their products to better meet the evolving 
+            desires of their customers. By doing so, breweries can help clients make better choices as they continue to try new types of beer.<br>
+            On the other hand, it can help beer consumers to try new types of beers. By identifying people that had similar preferences to their current ones, they can follow their beer tasting path. This will help them to make better choices and to confidently explore new horizons.
           </p>
         </div>
 
@@ -203,7 +203,7 @@
           <p>
             For our results to be as meaningful as possible, we need to determine the proper subset of users on which we are going 
             to conduct our analyses. As a matter of fact, not everyone posting an online review can be considered a beer expert and 
-            we need to impose some self-defined but yet solid criterias to define expertiseness. The filtering performed on the raw 
+            we need to impose some self-defined but yet solid criteria to define expertises. The filtering performed on the raw 
             dataset can be divided into four different steps:     
           </p>
           <h3>Market selection:</h3>
@@ -219,7 +219,7 @@
           </p>
           <h3>Evolution:</h3>
           <p>
-            The number of reviews written by users is not a solid enough criteria to ensure a temporal evolution of their beer taste. 
+            The number of reviews written by users is not a solid enough criterion to ensure a temporal evolution of their beer taste. 
             For example, there are several users that were highly active during a very short period of time. We therefore required that 
             users were active on the website for at least 100 different days. Moreover, to guarantee a temporal evolution that is not too 
             short and not too long for 500 ratings, we filtered out users that took less than 1 year and more than 7 years to submit their 500 ratings.
@@ -291,7 +291,7 @@
           <h2>Temporality and graph analysis</h2>
           <h3>Categories popularity through the years</h3>
           <p>
-            The popularity of the different beer categories is changing through time. 
+            The popularity of the different beer categories is changing over time. 
             The following plot is a visualization of this fact and it shows the percentage of rating for each category per year:</p>
         </div>
 
@@ -326,7 +326,7 @@
             however, we can observe that the Wild/Sour beers clearly increase the more the users gain experience.  
             Since almost all the categories seem to have no meaningful evolution along the rating numbers, 
             it will be necessary to cluster the different profiles to be able to extract the main patterns.<br>
-            To examine theses subtle evolutions and their relevance of beer preferences from a statistical perspective, 
+            To examine these subtle evolutions and their relevance of beer preferences from a statistical perspective, 
             we perform a linear regression analysis for each category.
           </p>
         </div>
@@ -443,8 +443,8 @@
           <div style="width: 40%; text-align: left; margin-left: 2em; padding-top: 12%;">
             <h4>Linear regression coefficient in percent per 10 ratings:</h4>
             <div style="text-align: justify;">
-              By looking on the linear coefficients, we have the same observations. 
-              The Wild/Sour beers seem to gain popularity when the users are more experienced. 
+              By looking at the linear coefficients, we have the same observations. 
+              Wild/Sour beers seem to gain popularity when the users are more experienced. 
               For the other categories, the effect is less important. 
               However, there could be some crossing between multiple type of users, artificially flattening the curves
             </div>
@@ -456,9 +456,9 @@
           <p>
             To show the transition in taste between the beginner user and when he's gained experienced, 
             the following graph shows an edge for each transition (favorite beer in the first and last 50 beers rated). 
-            Furthermore, the edges width shows the number of users taking the path and the size of the nodes represent the ratio of users ending up on this 
+            Furthermore, the width of the edges shows the number of users taking the path and the size of the nodes represents the ratio of users ending up on this 
             category over users starting.<br>
-            By howering on the edges or nodes, the statistics are revealed.
+            By hovering on the edges or nodes, the statistics are revealed.
           </p>
         </div>
 
@@ -491,8 +491,8 @@
         <div class="section-title">
           <h3>Choice of the number of clusters</h3>
           <p>
-            As K-means requires the number of cluster to be set, we used the silhouette score to choose it in a way that will give well 
-            separated compact groups. By plotting the score for a reasonable range of cluster number, we can visually determine the best k.
+            As K-means requires the number of clusters to be set, we used the silhouette score to choose it in a way that will give well 
+            separateds compact groups. By plotting the score for a reasonable range of cluster number, we can visually determine the best k.
           </p>
         </div>
 
@@ -554,7 +554,7 @@
 
         <div class="section-title">
           <p>
-            With both projections, we can see that the clusters are well separated and that there are three "specialized" teams with each a favorite beer 
+            With both projections, we can see that the clusters are separated and that there are three "specialized" teams with each a favorite beer 
             (IPA, Stout and Pale Lagers) and a "generalist" team in the middle with a more spread-out distribution of ratings but still a slight preference 
             for Pale Ales.
           </p>
