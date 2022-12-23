@@ -101,16 +101,11 @@
         <div class="section-title">
           <h3>Why it matters</h3>
           <p>
-            From our own experience, we can tell that our beer tastes have drastically evolved over the past 10 years. 
-            At first, we only drank Pils and found other types of beer difficult to enjoy. 
-            Today, we can enjoy an IPA but are not yet satisfied when being served a Guinness. 
-            An obvious question occurs: are these shifts in beer tastes we experience common to other beer drinkers as well? 
-            By analyzing detailed beer ratings submitted by millions of users on two of the largest beer rating websites worldwide, 
-            namely BeerAdvocate and RateBeer, we want to determine if and how beer tastes of people evolve through time. 
-            To tackle this question, we explore and combine different data representation techniques. 
-            Moreover, using several unsupervised learning techniques, we detect similarities in the beer tastes at the beginning of 
-            the drinking career of the users and analyze how they vary as they become more experienced. 
-            Lastly, we mathematically consolidate our findings with the use of statistics.
+            Understanding how people's preferences for different types of beer evolve over time can help businesses in the beer 
+            industry to make targeted advertising and respond to changing consumer preferences. By understanding the factors that 
+            influence changes in preferences, breweries can tailor their products to better meet the evolving needs and desires of their customers.
+            For each user, knowing their current preferences and potential future preferences for beer can help them in order to make 
+            better choices as they continue to try new types and expand their horizons.
           </p>
         </div>
 
@@ -313,6 +308,16 @@
           <object type="text/html" data="ratio_cat_rating.html"  width=2002, height=602></object>
         </div>
 
+        <div class="section-title">
+          <p>
+            It seems that all the categories are constant along the number ratings. 
+            However, we can observe that the Wild/Sour beers clearly increase the more the user gains experience.  
+            Since almost all the categories are constant along the number ratings. 
+            It seems that it is necessary to cluster the different profiles to be able to extract the main patterns.<br>
+            To examine the evolution of beer preferences from a statistical perspective, we perform a linear regression analysis for each category.
+          </p>
+        </div>
+
         <div style="display: flex; margin: auto; width: 70%; margin-bottom: 2em; margin-top: 2em;">
           
           <div class="section-title smaller">
@@ -425,8 +430,10 @@
           <div style="width: 40%; text-align: left; margin-left: 2em; padding-top: 12%;">
             <h4>Linear regression coefficient in percent per 10 ratings:</h4>
             <div style="text-align: justify;">
-              The Wild/Sour beers seem to gain popularity when the users are more experienced, for the other categories, the effect is less important. 
-              However, there could be some crossing between multiple type of users artificially flattening the curves. 
+              By looking on the linear coefficients, we have the same observations. 
+              The Wild/Sour beers seem to gain popularity when the users are more experienced. 
+              For the other categories, the effect is less important. 
+              However, there could be some crossing between multiple type of users artificially flattening the curves
             </div>
           </div>
         </div>
@@ -654,7 +661,7 @@
           <h4>Ada the explorer team:</h4>
           <p>
             We note that overall, there is no huge difference between the first and last 50 ratings. We can see that there are some few increasing 
-            in the number of ratings for the IPA (around 2%) and for Stout (around 1%) beers. We may also notice that there is a small decreasing 
+            in the number of ratings for the IPA (around 4%) and for Stout (around 2%) beers. We may also notice that there is a small decreasing 
             for the Wild/Sour beers.
           </p>
           <h4>James Bland team</h4>
@@ -664,14 +671,14 @@
           </p>
           <h4>Jean-Michel IPA team:</h4>
           <p>
-            For this team, we can observe that the interest of the IPA beers clearly decreases (from 22.8% to 16.1%). The members of this team seem 
+            For this team, we can observe that the interest of the IPA beers clearly decreases (from 45.6% to 32.2%). The members of this team seem 
             to still like this category, but this interest is less than before. Their tastes are increasing in favour of Stout beers and also Wild/ Sour beers.
           </p>
           <h4>Marcel Stout team:</h4>
           <p>
             The behaviour of this team is quite the opposite of the behaviour of Jean-Michel's IPA team in that instead of having an increase in interest 
             in Stout beers and a decrease in interest in IPA beers. We have the opposite. In this team, tastes are increasing for IPA beers 
-            (increase of about 2.5%) and there is clearly a decrease for Stout beers (about 4%).
+            (increase of about 5%) and there is clearly a decrease for Stout beers (about 8%).
           </p>
 
         </div>
@@ -747,11 +754,11 @@
           <div class="image" style="padding-left:30px; padding-top:30px; padding-bottom:30px; padding-right: 8px;">
             <img src="assets/img/testimonials/ipa.png" class="round-img">
           </div>
-          <div class="beers">1. IPA<br>2. Pale Ales<br>3. Stout</div>
+          <div class="beers">45.6% IPA<br>14.9% Pale Ales<br>9.1% &nbsp; Stout</div>
           <div class="arrow1" style="border:5px solid #636EFA;"></div>
           <div class="arrow" style="background-color: #636EFA;"></div>
           <div class="arrow2" style="border:5px solid #636EFA;"></div>
-          <div class="beers">1. IPA<br>2. Pale Ales<br>3. Stout</div>
+          <div class="beers">32.3% IPA<br>16.3% Pale Ales<br>15.2% Stout</div>
           <div class="image" style="padding-left:8px; padding-top:30px; padding-bottom:30px; padding-right: 30px;">
             <img src="assets/img/testimonials/ipa_2.jpeg" class="round-img">
           </div>
@@ -761,11 +768,11 @@
           <div class="image" style="padding-left:30px; padding-top:30px; padding-bottom:30px; padding-right: 8px;">
             <img src="assets/img/testimonials/ada.jpg" class="round-img">
           </div>
-          <div class="beers">1. Pale Ales<br>2. IPA<br>3. Strong Ales</div>
+          <div class="beers">18.8% Pale Ales<br>16.4% IPA<br>12.3% Strong Ales</div>
           <div class="arrow1" style="border:5px solid #EF553B;"></div>
           <div class="arrow" style="background-color: #EF553B;"></div>
           <div class="arrow2" style="border:5px solid #EF553B;"></div>
-          <div class="beers">1. IPA<br>2. Pale Ales<br>3. Stouts</div>
+          <div class="beers">21.1% IPA<br>17.7% Pale Ales<br>12.4% Stouts</div>
           <div class="image" style="padding-left:8px; padding-top:30px; padding-bottom:30px; padding-right: 30px;">
             <img src="assets/img/testimonials/ada_2.jpeg" class="round-img">
           </div> 
@@ -775,11 +782,11 @@
           <div class="image" style="padding-left:30px; padding-top:30px; padding-bottom:30px; padding-right: 10px;">
             <img src="assets/img/testimonials/lager.png" class="round-img">
           </div>
-          <div class="beers">1. Pales Lagers<br>2. Pale Ales<br>3. Wheat Beers</div>
+          <div class="beers">27.2% Pales Lagers<br>15.5% Pale Ales<br>9.5% &nbsp; Wheat Beers</div>
           <div class="arrow1" style="border:5px solid #AB63FA;"></div>
           <div class="arrow" style="background-color: #AB63FA;"></div>
           <div class="arrow2" style="border:5px solid #AB63FA;"></div>
-          <div class="beers">1. IPA<br>2. Pale Ales<br>3. Stout</div>
+          <div class="beers">20.3% IPA<br>19.0% Pale Ales<br>10.6% Stout</div>
           <div class="image" style="padding-left:10px; padding-top:30px; padding-bottom:30px; padding-right: 30px;">
             <img src="assets/img/testimonials/lager_2.jpeg" class="round-img">
           </div> 
@@ -789,11 +796,11 @@
           <div class="image" style="padding-left:30px; padding-top:30px; padding-bottom:30px; padding-right: 10px;">
             <img src="assets/img/testimonials/stout.png" class="round-img">
           </div>
-          <div class="beers">1. Stouts<br>2. IPA<br>3. Strong Ales</div>
+          <div class="beers">30.3% Stouts<br>19.7% IPA<br>12.3% Strong Ale</div>
           <div class="arrow1" style="border:5px solid #00CC96;"></div>
           <div class="arrow" style="background-color: #00CC96;"></div>
           <div class="arrow2" style="border:5px solid #00CC96;"></div>
-          <div class="beers">1. IPA<br>2. Stouts<br>3. Pale Ales</div>
+          <div class="beers">23.0% IPA<br>20.3% Stouts<br>14.1% Pale Ales</div>
           <div class="image" style="padding-left:10px; padding-top:30px; padding-bottom:30px; padding-right: 30px;">
             <img src="assets/img/testimonials/stout_2.jpeg" class="round-img">
           </div>

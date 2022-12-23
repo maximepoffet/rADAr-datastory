@@ -1261,10 +1261,11 @@ section {
 .beers{
   margin: auto;
   padding-top: 16px;
-  width: 150px;
+  padding-left: 10px;
+  width: 200px;
   height: 120px;
   /*display: flex;*/
-  text-align: center;
+  text-align: justify;
   font-size: 20px;
   font-weight: bold;
 }
