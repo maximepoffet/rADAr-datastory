@@ -504,15 +504,15 @@
           <p>
             Since we were hesitating between 4 or 5, we decided to plot the centroids to have a better visualization. 
             It happened that k=5 had 3 clusters greatly correlated, so we finally decided to keep k=4, as the clusters were nicely spread out and different.<br>
-            Clustering with GMM was also tried and gave us similar results. The simpler K-means algorithm was therefore choosed.
+            Clustering with GMM was also tried and gave us similar results. The simpler K-means algorithm was therefore chosen.
           </p>
         </div>
 
 
         <div class="section-title">
-          <h3>Visualisation of the clusters</h3>
+          <h3>Visualization of the clusters</h3>
           <p>
-            We can now apply the K-means algorithm and plot the average vector representations for the 4 clusters on the following figure:
+            We can now apply the K-means algorithm and plot the average vector representations for the 4 clusters in the following figure:
           </p>
         </div>
 
@@ -543,8 +543,8 @@
 
         <div class="section-title">
           <p>
-            The distribution of users in the clusters cannot be directly visualized as they reside in a 15-dimmensions space. 
-            However, With the help of Principal Component Analyses (PCA) and UMAP, we are able to project thoses dimmensions onto only two significant ones. 
+            The distribution of users in the clusters cannot be directly visualized as they reside in a 15-dimensions space. 
+            However, With the help of Principal Component Analyses (PCA) and UMAP, we are able to project those dimensions onto only two significant ones. 
           </p>
         </div>
 
@@ -555,7 +555,7 @@
         <div class="section-title">
           <p>
             With both projections, we can see that the clusters are separated and that there are three "specialized" teams with each a favorite beer 
-            (IPA, Stout and Pale Lagers) and a "generalist" team in the middle with a more spread-out distribution of ratings but still a slight preference 
+            (IPA, Stouts and Pale Lagers) and a "generalist" team in the middle with a more spread-out distribution of ratings but still a slight preference 
             for Pale Ales.
           </p>
         </div>
@@ -626,10 +626,10 @@
           <h3>Users joining date</h3>
           <p>
             As we noticed previously it is important to take into account the change in popularity of the different categories through the years when comparing
-            different users. This is particularly true when clustering, as we don't want to group them temporaly. The following plot shows the distributions of 
+            different users. This is particularly true when clustering, as we don't want to group them temporarily. The following plot shows the distributions of 
             the joining dates of the users in the four clusters. It can be seen that the distributions are similar, with a peak around 2014, it is also at that time
             that the website experienced a massive gain in popularity. 
-            The clusters are therefore not influenced by the changings in popularity of the categories.
+            The clusters are therefore not influenced by the changes in popularity of the categories.
           </p>
         </div>
 
@@ -656,7 +656,7 @@
             We can already see that depending on the cluster a user is in, there are many differences. 
             Then we plot the average number of beers rated during the 50 last ratings (450 to 499) for each cluster. 
             Note that the separation of people into each cluster stays the same, we just look at their last ratings. <br>
-            This plot shows that the taste of the average user has evolved (e.g. the team “James Bland” have given up drinking Pale Lagers and prefer now IPA’s). 
+            This plot shows that the taste of the average user has evolved (e.g. the team “James Bland” have given up drinking Pale Lagers and prefers now IPAs). 
             Furthermore, we see that depending on the initial “team” of a user, its taste hasn't evolved the same. 
             As an example, the team “James Bland” started drinking some dark lager beers, while the “Marcel Stout” haven’t changed their habits at all 
             regarding this category. <br>
@@ -664,7 +664,7 @@
             This plot shows only small changes from first to last ratings in most of the categories. 
             It is interesting to notice that many changes happened in each team, which are not visible in the overall graph, giving credit to the idea 
             of clustering the users. 
-            Furthermore, we notice a large increase in the interest in the Wild/Sour category, confirming that this category is reserved to “experts”. 
+            Furthermore, we notice a large increase in interest in the Wild/Sour category, confirming that this category is reserved for the “experts”. 
             Each plot also shows 95% confidence intervals which were computed using bootstrap resampling in each cluster.
           </p>
 
@@ -677,8 +677,8 @@
         <div class="section-title">
           <h4>Jean-Michel IPA team:</h4>
           <p>
-            For this team, we can observe that the interest of the IPA beers clearly decreases (from 45.6% to 32.2%). The members of this team seem 
-            to still like this category, but this interest is less than before. Their tastes are increasing in favour of Stout beers and also Wild/ Sour beers.
+            For this team, we can observe that the interest in the IPAs clearly decreases (from 45.6% to 32.2%). The members of this team seem 
+            to still like this category, but this interest is less than before. Their tastes are increasing in favor of Stout beers and also Wild/ Sour beers.
           </p>
           <h4>Marcel Stout team:</h4>
           <p>
@@ -688,14 +688,14 @@
           </p>
           <h4>James Bland team</h4>
           <p>
-            This is the most interesting team. We can clearly see a shift of the Pale Lagers beers to the IPA beers. At first, the members of this 
-            team had a strong interest for Pale Lagers beers, then, this interest fades out (around 9% less) and the IPA beers interest drastically 
+            This is the most interesting team. We can clearly see a shift from the Pale Lagers beers to the IPA beers. At first, the members of this 
+            team had a strong interest for Pale Lagers, then, this interest fades out (around 9% less) and the IPA beers interest drastically 
             increases (around 7% more).
           </p>
           <h4>Ada the explorer team:</h4>
           <p>
-            We note that overall, there is no huge difference between the first and last 50 ratings. We can see that there are some few increases
-            in the number of ratings for the IPAs (around 4%), for Stouts (around 2%) and the Wild/Sour beers (around 3.2%). 
+            We note that overall, there is no huge difference between the first and last 50 ratings. We can see that there are some increases
+            in the number of ratings for the IPAs (around 4%), the Stouts (around 2%) and the Wild/Sour beers (around 3.2%). 
             We may also notice that there is a small decrease for the Wheat beers (1%).
           </p>
 
@@ -728,18 +728,18 @@
         <div class="section-title">
           <p>
             With the clusters, the changes that compensated themselves in the overall analysis are revealed. However, as we will see in the following graphs, 
-            the members of a cluster don't allways take the same path to expertise. Indeed, as the clusters were defined on the 50 first ratings, there is no 
+            the members of a cluster don't always take the same path to expertise. Indeed, as the clusters were defined on the first 50 ratings, there is no 
             assurance that they will stay similar. Some changes in taste may then still be hidden.
           </p>
         </div>
         <div class="section-title">
           <h3>Favorite beer transitions in the clusters</h3>
           <p>
-            The following graphs show the evolutions in taste for the users in each clusters.
-            In the same way as for the general graph, the edges represent the transition in favorite beer from the 50 firsts to the 50 lasts for each users. 
-            The edge width shows the number of users taking this path and the size of the nodes represent the ratio of users ending up on this category over 
+            The following graphs show the evolutions in taste for the users in each cluster.
+            In the same way as for the general graph, the edges represent the transition in favorite beer from the 50 firsts to the 50 lasts for each user. 
+            The edge width shows the number of users taking this path and the size of the nodes represents the ratio of users ending up in this category over 
             users starting.<br>
-            By howering on the edges or nodes, the statistics are revealed.
+            By hovering on the edges or nodes, the statistics are revealed.
           </p>
         </div>
         <div class="image">     
@@ -766,7 +766,7 @@
             from the United States of America. Overall, we found that the majority of experts showed a general trend of increasing 
             preference for one type of beer : the Wild/Sour beer. However, there was significant variation among individuals which 
             we detected with an unsupervised clustering method.<br>
-            Even though we noticed some subtle changes inside the teams, this analysis also showed the supremacy of the IPA’s, Pale Ales and Stouts. 
+            Even though we noticed some subtle changes inside the teams, this analysis also showed the supremacy of the IPAs, Pale Ales and Stouts. 
             These categories are very popular and turned out to be the favorite beers of all teams as they became experts. <br>
             The favorite beers of the clusters as beginners and experts are summarized here:
             </p>
