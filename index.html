@@ -90,11 +90,11 @@
             At first, we only drank Pils and found other types of beer difficult to enjoy. 
             Today, we can enjoy an IPA but are not yet satisfied when being served a Guinness. <br>
             An obvious question occurs: are these shifts in beer tastes we experience common to other beer drinkers as well? 
-            By analyzing detailed beer ratings submitted by millions of users on two of the largest beer rating websites worldwide, 
+            By analyzing detailed beer ratings submitted by millions of users on one of the largest beer rating website worldwide, 
             namely BeerAdvocate, we want to determine if and how beer tastes of people evolve through time. 
             To tackle this question, we explore and combine different data representation techniques. 
             Moreover, using several unsupervised learning techniques, we detect similarities in the beer tastes at the beginning of 
-            the drinking career of the users and analyze how they vary as they become more experienced. 
+            the rating career of the users and analyze how they vary as they become more experienced. 
             Lastly, we mathematically consolidate our findings with the use of statistics. 
           </p>
         </div>
@@ -232,7 +232,15 @@
         
         </div>
         <div class="section-title">
-          <p>The filtered dataset can now be summarized with the following statistics:</p>
+          <p>
+            Moreover, as the website divides the beers into 115 different styles, it would be complicated to extract meaningful findings. 
+            We have therefore reduced those styles into 15 more general categories.
+          </p>
+        </div>
+        <div class="section-title">
+          <p>
+            The filtered dataset can now be summarized with the following statistics:
+          </p>
         </div>
 
         <div class="row smaller">
@@ -282,9 +290,9 @@
         <div class="section-title">
           <h2>Temporality and graph analysis</h2>
           <h3>Categories popularity through the years</h3>
-          <p>Categories popularity through the years
+          <p>
             The popularity of the different beer categories is changing through time. 
-            The following plot is a visualization of this fact and shows the percentage of rating for each category per year:</p>
+            The following plot is a visualization of this fact and it shows the percentage of rating for each category per year:</p>
         </div>
 
         <div class="image">
@@ -292,16 +300,20 @@
         </div>
 
         <div class="section-title">
-          <p>Without surprise, IPA beers have gained much popularity during the analyzed period. On the other hand, some beers 
-            did experience a popularity decrease such as Pale Ales and Pale Lagers. These shifts will be important to take into 
-            account when comparing a user from the beginning of the period and a user from the end.
+          <p>Without surprise, IPA beers have gained much popularity during the analyzed period, becoming the undisputed most rated category. 
+            On the other hand, some beers did experience a popularity decrease such as Pale Ales and Pale Lagers. 
+            These shifts will be important to take into account when comparing a user from the beginning of the period and a user from the end.
           </p>
         </div>
 
 
         <div class="section-title">
           <h3>Categories popularity vs. user expertise</h3>
-          <p>The next plot shows the change in percent of ratings for each category through the user "career":</p>
+          <p>
+            As we intend to see the evolution of tastes during the users journeys and not through the years, we want to use the rating number 
+            instead of the date as the timeline.
+            The next plot shows the change in percent of ratings for each category through the users "careers":
+          </p>
         </div>
 
         <div class="image">
@@ -310,11 +322,12 @@
 
         <div class="section-title">
           <p>
-            It seems that all the categories are constant along the number ratings. 
-            However, we can observe that the Wild/Sour beers clearly increase the more the user gains experience.  
-            Since almost all the categories are constant along the number ratings. 
-            It seems that it is necessary to cluster the different profiles to be able to extract the main patterns.<br>
-            To examine the evolution of beer preferences from a statistical perspective, we perform a linear regression analysis for each category.
+            It seems that all the categories are quite constant along the rating numbers, 
+            however, we can observe that the Wild/Sour beers clearly increase the more the users gain experience.  
+            Since almost all the categories seem to have no meaningful evolution along the rating numbers, 
+            it will be necessary to cluster the different profiles to be able to extract the main patterns.<br>
+            To examine theses subtle evolutions and their relevance of beer preferences from a statistical perspective, 
+            we perform a linear regression analysis for each category.
           </p>
         </div>
 
@@ -433,7 +446,7 @@
               By looking on the linear coefficients, we have the same observations. 
               The Wild/Sour beers seem to gain popularity when the users are more experienced. 
               For the other categories, the effect is less important. 
-              However, there could be some crossing between multiple type of users artificially flattening the curves
+              However, there could be some crossing between multiple type of users, artificially flattening the curves
             </div>
           </div>
         </div>
@@ -490,8 +503,8 @@
         <div class="section-title">
           <p>
             Since we were hesitating between 4 or 5, we decided to plot the centroids to have a better visualization. 
-            It happened that k=5 had 3 clusters really correlated, so we finally decided to keep k=4, as the clusters were nicely spread out and different.
-            <br>Clustering with GMM was also tried and gave us similar results. That’s why we decided to keep going with the K-means algorithm.
+            It happened that k=5 had 3 clusters greatly correlated, so we finally decided to keep k=4, as the clusters were nicely spread out and different.<br>
+            Clustering with GMM was also tried and gave us similar results. The simpler K-means algorithm was therefore choosed.
           </p>
         </div>
 
@@ -511,7 +524,7 @@
           <h4>Cluster 0:</h4>
           <p>
             The members of this cluster have a clear preference for the beers in the IPA category, the other ones are less represented.
-            The Stouts and strong ales are the most rated from the lesser represented categories.
+            The Stouts and Strong Ales are the most rated from the lesser represented categories.
           </p>
           <h4>Cluster 1:</h4>
           <p>
@@ -523,15 +536,15 @@
           </p>
           <h4>Cluster 3:</h4>
           <p>
-            The last one has two favorites, the main one is the Stout category and the second one is the Stouts. All the other categories lack representation.
+            The last one has two favorites, the main one is the Stout category and the second one is the India Pale Ales. All the other categories lack representation.
           </p>
         </div>
 
 
         <div class="section-title">
           <p>
-            The clusters cannot be directly visualized as they reside in a 15-dimmensions space. With the help of Principal Component Analyses (PCA) 
-            and UMAP, we are able to project thoses dimmensions onto only two significant ones. 
+            The distribution of users in the clusters cannot be directly visualized as they reside in a 15-dimmensions space. 
+            However, With the help of Principal Component Analyses (PCA) and UMAP, we are able to project thoses dimmensions onto only two significant ones. 
           </p>
         </div>
 
@@ -541,15 +554,16 @@
 
         <div class="section-title">
           <p>
-            With both projections, we can see that there are three "specialized" clusters with each a favorite beer (IPA, Stout and Pale Lagers) and a "generalist"
-            cluster in the middle with a more spread-out distribution of ratings but still a slight preference for Pale Ales.
+            With both projections, we can see that the clusters are well separated and that there are three "specialized" teams with each a favorite beer 
+            (IPA, Stout and Pale Lagers) and a "generalist" team in the middle with a more spread-out distribution of ratings but still a slight preference 
+            for Pale Ales.
           </p>
         </div>
 
 
         <div class="section-title">
           <p>
-            We decided to personify these 4 average users, you can meet them by swiping in the following carousel:
+            We decided to personify these 4 average users that will represent their respective team, you can meet them by swiping in the following carousel:
           </p>
         </div>
 
@@ -612,8 +626,9 @@
           <h3>Users joining date</h3>
           <p>
             As we noticed previously it is important to take into account the change in popularity of the different categories through the years when comparing
-            different users. This is particularly true when clustering, as we don't want to group them temporaly. To following plot shows the distributions of 
-            the joining dates of the users in the four clusters. It can be seen that the distributions are similar, with a peak around 2014. 
+            different users. This is particularly true when clustering, as we don't want to group them temporaly. The following plot shows the distributions of 
+            the joining dates of the users in the four clusters. It can be seen that the distributions are similar, with a peak around 2014, it is also at that time
+            that the website experienced a massive gain in popularity. 
             The clusters are therefore not influenced by the changings in popularity of the categories.
           </p>
         </div>
@@ -640,17 +655,17 @@
             During the 50 first ratings of their “career” we plot the average number of beers rated from each category (green line). 
             We can already see that depending on the cluster a user is in, there are many differences. 
             Then we plot the average number of beers rated during the 50 last ratings (450 to 499) for each cluster. 
-            Note that the people present in each cluster are the same, we just look at their last ratings. <br>
+            Note that the separation of people into each cluster stays the same, we just look at their last ratings. <br>
             This plot shows that the taste of the average user has evolved (e.g. the team “James Bland” have given up drinking Pale Lagers and prefer now IPA’s). 
             Furthermore, we see that depending on the initial “team” of a user, its taste hasn't evolved the same. 
             As an example, the team “James Bland” started drinking some dark lager beers, while the “Marcel Stout” haven’t changed their habits at all 
             regarding this category. <br>
             We also added a plot showing all users together (independently of their team). 
             This plot shows only small changes from first to last ratings in most of the categories. 
-            However, it is interesting to notice that many changes happened in each team, which are not visible in the overall graph, giving credit to the idea 
+            It is interesting to notice that many changes happened in each team, which are not visible in the overall graph, giving credit to the idea 
             of clustering the users. 
             Furthermore, we notice a large increase in the interest in the Wild/Sour category, confirming that this category is reserved to “experts”. 
-            Each plot also shows 95% confidence intervals. These intervals were computed using bootstrap resampling in each cluster.
+            Each plot also shows 95% confidence intervals which were computed using bootstrap resampling in each cluster.
           </p>
 
         </div>
@@ -660,17 +675,6 @@
         </div>
 
         <div class="section-title">
-          <h4>Ada the explorer team:</h4>
-          <p>
-            We note that overall, there is no huge difference between the first and last 50 ratings. We can see that there are some few increasing 
-            in the number of ratings for the IPA (around 4%) and for Stout (around 2%) beers. We may also notice that there is a small decreasing 
-            for the Wild/Sour beers.
-          </p>
-          <h4>James Bland team</h4>
-          <p>
-            This is the most interesting team. We can clearly see a shift of the Pale Lagers beers to the IPA beers. At first, the members of this 
-            team had a strong interest for Pale Lagers beers. Then, this interest fades out and the IPA beers interest drastically increases.
-          </p>
           <h4>Jean-Michel IPA team:</h4>
           <p>
             For this team, we can observe that the interest of the IPA beers clearly decreases (from 45.6% to 32.2%). The members of this team seem 
@@ -679,8 +683,20 @@
           <h4>Marcel Stout team:</h4>
           <p>
             The behaviour of this team is quite the opposite of the behaviour of Jean-Michel's IPA team in that instead of having an increase in interest 
-            in Stout beers and a decrease in interest in IPA beers. We have the opposite. In this team, tastes are increasing for IPA beers 
+            in Stout beers and a decrease in interest in IPA beers, we have the opposite. In this team, tastes are increasing for IPA beers 
             (increase of about 5%) and there is clearly a decrease for Stout beers (about 8%).
+          </p>
+          <h4>James Bland team</h4>
+          <p>
+            This is the most interesting team. We can clearly see a shift of the Pale Lagers beers to the IPA beers. At first, the members of this 
+            team had a strong interest for Pale Lagers beers, then, this interest fades out (around 9% less) and the IPA beers interest drastically 
+            increases (around 7% more).
+          </p>
+          <h4>Ada the explorer team:</h4>
+          <p>
+            We note that overall, there is no huge difference between the first and last 50 ratings. We can see that there are some few increases
+            in the number of ratings for the IPAs (around 4%), for Stouts (around 2%) and the Wild/Sour beers (around 3.2%). 
+            We may also notice that there is a small decrease for the Wheat beers (1%).
           </p>
 
         </div>
@@ -701,7 +717,8 @@
 
         <div class="section-title">
           <p>
-            The next plot shows their evolution through their 500 ratings.
+            To show the evolutions presented above throughout the whole journey of the users divided into the four clusters, 
+            the next plot shows the popularity of the categories through their 500 ratings.
           </p>
         </div>
 
@@ -745,10 +762,13 @@
           <h2>Conclusion</h2>
           <p>
             Looking back at our main question, we asked ourselves if beer tastes of users evolve as they gain more experience ? <br>
-            In this work, we were able to identify trends and patterns in the evolution of beer tastes of BeerAdvocate reviewers from the United States of America.
-            Overall, we found that the majority of experts showed a general trend of increasing preference for one type of beer : the Wild/Sour beer. 
-            However, there was significant variation among individuals which we detected with an unsupervised clustering method. <br>
-            These are summarized in the following :
+            In this work, we were able to identify trends and patterns in the evolution of beer tastes of BeerAdvocate reviewers 
+            from the United States of America. Overall, we found that the majority of experts showed a general trend of increasing 
+            preference for one type of beer : the Wild/Sour beer. However, there was significant variation among individuals which 
+            we detected with an unsupervised clustering method.<br>
+            Even though we noticed some subtle changes inside the teams, this analysis also showed the supremacy of the IPA’s, Pale Ales and Stouts. 
+            These categories are very popular and turned out to be the favorite beers of all teams as they became experts. <br>
+            The favorite beers of the clusters as beginners and experts are summarized here:
             </p>
         </div>
 
@@ -756,11 +776,11 @@
           <div class="image" style="padding-left:30px; padding-top:30px; padding-bottom:30px; padding-right: 8px;">
             <img src="assets/img/testimonials/ipa.png" class="round-img">
           </div>
-          <div class="beers">45.6% IPA<br>14.9% Pale Ales<br>9.1% &nbsp; Stout</div>
+          <div class="beers">45.6% IPAs<br>14.9% Pale Ales<br>9.1% &nbsp; Stouts</div>
           <div class="arrow1" style="border:5px solid #636EFA;"></div>
           <div class="arrow" style="background-color: #636EFA;"></div>
           <div class="arrow2" style="border:5px solid #636EFA;"></div>
-          <div class="beers">32.3% IPA<br>16.3% Pale Ales<br>15.2% Stout</div>
+          <div class="beers">32.3% IPAs<br>16.3% Pale Ales<br>15.2% Stouts</div>
           <div class="image" style="padding-left:8px; padding-top:30px; padding-bottom:30px; padding-right: 30px;">
             <img src="assets/img/testimonials/ipa_2.jpeg" class="round-img">
           </div>
@@ -770,11 +790,11 @@
           <div class="image" style="padding-left:30px; padding-top:30px; padding-bottom:30px; padding-right: 8px;">
             <img src="assets/img/testimonials/ada.jpg" class="round-img">
           </div>
-          <div class="beers">18.8% Pale Ales<br>16.4% IPA<br>12.3% Strong Ales</div>
+          <div class="beers">18.8% Pale Ales<br>16.4% IPAs<br>12.3% Strong Ales</div>
           <div class="arrow1" style="border:5px solid #EF553B;"></div>
           <div class="arrow" style="background-color: #EF553B;"></div>
           <div class="arrow2" style="border:5px solid #EF553B;"></div>
-          <div class="beers">21.1% IPA<br>17.7% Pale Ales<br>12.4% Stouts</div>
+          <div class="beers">21.1% IPAs<br>17.7% Pale Ales<br>12.4% Stouts</div>
           <div class="image" style="padding-left:8px; padding-top:30px; padding-bottom:30px; padding-right: 30px;">
             <img src="assets/img/testimonials/ada_2.jpeg" class="round-img">
           </div> 
@@ -788,7 +808,7 @@
           <div class="arrow1" style="border:5px solid #AB63FA;"></div>
           <div class="arrow" style="background-color: #AB63FA;"></div>
           <div class="arrow2" style="border:5px solid #AB63FA;"></div>
-          <div class="beers">20.3% IPA<br>19.0% Pale Ales<br>10.6% Stout</div>
+          <div class="beers">20.3% IPAs<br>19.0% Pale Ales<br>10.6% Stouts</div>
           <div class="image" style="padding-left:10px; padding-top:30px; padding-bottom:30px; padding-right: 30px;">
             <img src="assets/img/testimonials/lager_2.jpeg" class="round-img">
           </div> 
@@ -798,11 +818,11 @@
           <div class="image" style="padding-left:30px; padding-top:30px; padding-bottom:30px; padding-right: 10px;">
             <img src="assets/img/testimonials/stout.png" class="round-img">
           </div>
-          <div class="beers">30.3% Stouts<br>19.7% IPA<br>12.3% Strong Ale</div>
+          <div class="beers">30.3% Stouts<br>19.7% IPAs<br>12.3% Strong Ales</div>
           <div class="arrow1" style="border:5px solid #00CC96;"></div>
           <div class="arrow" style="background-color: #00CC96;"></div>
           <div class="arrow2" style="border:5px solid #00CC96;"></div>
-          <div class="beers">23.0% IPA<br>20.3% Stouts<br>14.1% Pale Ales</div>
+          <div class="beers">23.0% IPAs<br>20.3% Stouts<br>14.1% Pale Ales</div>
           <div class="image" style="padding-left:10px; padding-top:30px; padding-bottom:30px; padding-right: 30px;">
             <img src="assets/img/testimonials/stout_2.jpeg" class="round-img">
           </div>
